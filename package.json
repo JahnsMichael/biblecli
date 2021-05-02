@@ -2,9 +2,9 @@
   "name": "biblecli",
   "version": "1.0.0",
   "description": "Query bible verses in your terminal.",
-  "main": "bin/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -14,9 +14,6 @@
     "bible",
     "cli"
   ],
-  "bin": {
-    "bib": "./bin/index.js"
-  },
   "author": "Jahns Michael",
   "license": "MIT",
   "bugs": {

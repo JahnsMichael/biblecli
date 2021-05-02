@@ -1,16 +1,20 @@
 import * as yargs from "yargs";
 
 const argv = yargs.options({
-  env: {
-    alias: "e",
-    choices: ["dev", "prod"] as const,
+  book: {
+    alias: "b",
     demandOption: true,
-    description: "app environment",
+    description: "book name",
   },
-  port: {
-    alias: "p",
-    default: 80,
-    description: "port",
+  ver: {
+    alias: "v",
+    demandOption: true,
+    description: "translation version name",
+  },
+  chapter: {
+    alias: "ch",
+    demandOption: true,
+    description: "chapter number",
   },
 }).argv;
 
