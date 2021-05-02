@@ -1,6 +1,6 @@
 import * as yargs from "yargs";
 
-const argv = yargs.options({
+const args = yargs.options({
   book: {
     alias: "b",
     demandOption: true,
@@ -12,10 +12,10 @@ const argv = yargs.options({
     description: "translation version name",
   },
   chapter: {
-    alias: "ch",
+    alias: "c",
     demandOption: true,
     description: "chapter number",
   },
 }).argv;
 
-console.log(argv);
+console.log(args);
