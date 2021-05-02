@@ -1,0 +1,23 @@
+{
+  "name": "biblecli",
+  "version": "1.0.0",
+  "description": "Query bible verses in your terminal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JahnsMichael/biblecli.git"
+  },
+  "keywords": [
+    "bible",
+    "cli"
+  ],
+  "author": "Jahns Michael",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JahnsMichael/biblecli/issues"
+  },
+  "homepage": "https://github.com/JahnsMichael/biblecli#readme"
+}
