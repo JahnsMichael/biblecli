@@ -1,21 +1,30 @@
-import * as yargs from "yargs";
+import yargs from "yargs";
+import axios from "axios";
+import parser from "xml2json";
 
 const args = yargs.options({
   book: {
     alias: "b",
-    demandOption: true,
     description: "book name",
+  },
+  passage: {
+    alias: "p",
+    demandOption: true,
+    description: "passage",
   },
   ver: {
     alias: "v",
-    demandOption: true,
+    default: "",
     description: "translation version name",
   },
   chapter: {
     alias: "c",
-    demandOption: true,
     description: "chapter number",
   },
 }).argv;
 
-console.log(args);
+axios
+  .get(`http://alkitab.sabda.org/api/passage.php?passage=${args["passage"]}`)
+  .then((res) => {
+    console.log(parser.toJson(res.data));
+  });
